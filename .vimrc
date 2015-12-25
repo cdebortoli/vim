@@ -16,6 +16,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'rking/ag.vim'
+Plugin 'scrooloose/syntastic' 
+Plugin 'Valloric/YouCompleteMe'
 
 call vundle#end()
 filetype plugin indent on
@@ -87,6 +89,16 @@ map <F9> :NERDTreeFind<CR>
 
 " CtrlP
 let g:ctrlp_show_hidden = 1
+
+" SYNTASTIC
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " OTHER
 set encoding=utf-8
