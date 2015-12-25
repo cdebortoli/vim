@@ -28,8 +28,8 @@ filetype plugin indent on
 
 " POWERLINE
 set laststatus=2
-let g:airline_powerline_fonts = 1
-let g:airline_theme='badwolf'
+let g:airline_powerline_fonts = 0 
+let g:airline_theme='serene'
 function! AirlineInit()
 	let g:airline_section_d = airline#section#create_left(['hunks'])
 endfunction
@@ -76,14 +76,8 @@ map <Leader>gp :Gpush<CR>
 let g:html_indent_tags = 'li\|p'
 
 " THEME
-"colorscheme koehler
+colorscheme koehler
 syntax enable
-if !has("gui_running")
-	let g:solarized_termtrans=1
-	let g:solarized_termcolors=256
-endif
-set background=dark
-colorscheme solarized
 
 " NERD TREE
 "autocmd vimenter * NERDTree
@@ -108,5 +102,6 @@ let g:syntastic_check_on_wq = 0
 " OTHER
 set encoding=utf-8
 set t_Co=256
+"set fillchars+=stl:\ ,stlnc:\
 set term=xterm-256color
 set termencoding=utf-8
