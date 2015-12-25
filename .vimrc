@@ -30,7 +30,8 @@ filetype plugin indent on
 set laststatus=2
  let g:airline_powerline_fonts = 1
 "let g:airline#extensions#tmuxline#enabled = 0
-let g:airline_theme='serene'
+"let g:airline_theme='serene'
+let g:airline_theme='badwolf'
 function! AirlineInit()
 	let g:airline_section_d = airline#section#create_left(['hunks'])
 endfunction
@@ -38,6 +39,11 @@ autocmd VimEnter * call AirlineInit()
 
 " VIM
 syntax on
+
+"highlight vertical column of cursor
+au WinLeave * set nocursorline nocursorcolumn
+au WinEnter * set cursorline
+
 set number
 set ruler
 set cursorline
@@ -51,7 +57,7 @@ set ttimeoutlen=20
 set notimeout
 set smartcase
 set ignorecase
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o " No comments on copy/paste insert
 
 
 " Get off my lawn
@@ -59,11 +65,6 @@ nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
-
-"highlight vertical column of cursor
-au WinLeave * set nocursorline nocursorcolumn
-au WinEnter * set cursorline
-set cursorline
 
 " Leader Mappings
 map <Space> <leader>
