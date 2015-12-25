@@ -18,6 +18,10 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/syntastic' 
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-surround'
+Plugin 'pangloss/vim-javascript'
+
 
 call vundle#end()
 filetype plugin indent on
@@ -47,6 +51,8 @@ set ttimeoutlen=20
 set notimeout
 set smartcase
 set ignorecase
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
