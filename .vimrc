@@ -17,25 +17,13 @@ Bundle 'altercation/vim-colors-solarized'
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'rking/ag.vim'
 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-" filetype plugin on
-" 
-" " Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just
-" :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to
-" auto-approve removal
-" 
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
 " POWERLINE
 set laststatus=2
@@ -52,6 +40,38 @@ syntax on
 set number
 set ruler
 set cursorline
+set ttyfast
+set lazyredraw
+set showcmd
+set incsearch
+set hlsearch
+set ttimeout
+set ttimeoutlen=20
+set notimeout
+set smartcase
+set ignorecase
+
+" Get off my lawn
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
+
+"highlight vertical column of cursor
+au WinLeave * set nocursorline nocursorcolumn
+au WinEnter * set cursorline
+set cursorline
+
+" Leader Mappings
+map <Space> <leader>
+map <Leader>w :update<CR>
+map <Leader>q :qall<CR>
+map <Leader>gs :Gstatus<CR>
+map <Leader>gc :Gcommit<CR>
+map <Leader>gp :Gpush<CR>
+
+" Treat <li> and <p> tags like the block tags they are
+let g:html_indent_tags = 'li\|p'
 
 " THEME
 "colorscheme koehler
@@ -64,11 +84,11 @@ set background=dark
 colorscheme solarized
 
 " NERD TREE
-autocmd vimenter * NERDTree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"autocmd vimenter * NERDTree
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
-
+map <F9> :NERDTreeFind<CR>
 
 " Other
 set encoding=utf-8
