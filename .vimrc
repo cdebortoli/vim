@@ -21,7 +21,7 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-surround'
 Plugin 'pangloss/vim-javascript'
-
+Plugin 'keith/swift.vim'
 
 call vundle#end()
 filetype plugin indent on
