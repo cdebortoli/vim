@@ -37,6 +37,7 @@ autocmd VimEnter * call AirlineInit()
 
 " VIM
 syntax on
+set clipboard=unnamed
 
 "highlight vertical column of cursor
 au WinLeave * set nocursorline nocursorcolumn
@@ -91,9 +92,17 @@ colorscheme solarized
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
 map <F9> :NERDTreeFind<CR>
+let NERDTreeShowHidden=1
 
 " CtrlP
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_follow_symlinks = 1
+let g:ctrlp_dotfiles=1
+" only show files that are not ignored by git
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+" search the nearest ancestor that contains .git, .hg, .svn
+let g:ctrlp_working_path_mode = 2
+
 
 " SYNTASTIC
 set statusline+=%#warningmsg#
