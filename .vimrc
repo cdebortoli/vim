@@ -20,8 +20,18 @@ Plugin 'scrooloose/syntastic'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-surround'
-Plugin 'pangloss/vim-javascript'
-Plugin 'keith/swift.vim'
+Plugin 'pangloss/vim-javascript', { 'for': 'javascript'}
+Plugin 'keith/swift.vim', { 'for': 'swift' }
+Plugin 'mattn/emmet-vim', { 'for': 'html' }
+Plugin 'gregsexton/MatchTag', { 'for': 'html' }
+Plugin 'othree/html5.vim', { 'for': 'html' }
+Plugin 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
+Plugin 'elzr/vim-json', { 'for': 'json' }
+Plugin 'moll/vim-node', { 'for': 'javascript' }
+Plugin 'groenewege/vim-less', { 'for': 'less' }
+Plugin 'ap/vim-css-color', { 'for': 'css' }
+Plugin 'hail2u/vim-css3-syntax', { 'for': 'css' }
+Plugin 'tpope/vim-markdown', { 'for': 'markdown' }
 
 call vundle#end()
 filetype plugin indent on
