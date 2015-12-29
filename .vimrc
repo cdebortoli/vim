@@ -32,6 +32,7 @@ Plugin 'groenewege/vim-less', { 'for': 'less' }
 Plugin 'ap/vim-css-color', { 'for': 'css' }
 Plugin 'hail2u/vim-css3-syntax', { 'for': 'css' }
 Plugin 'tpope/vim-markdown', { 'for': 'markdown' }
+Plugin 'mxw/vim-jsx', { 'for': 'jsx' }
 
 call vundle#end()
 filetype plugin indent on
