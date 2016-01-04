@@ -20,19 +20,19 @@ Plugin 'scrooloose/syntastic'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'tpope/vim-surround'
-Plugin 'pangloss/vim-javascript', { 'for': 'javascript'}
-Plugin 'keith/swift.vim', { 'for': 'swift' }
-Plugin 'mattn/emmet-vim', { 'for': 'html' }
-Plugin 'gregsexton/MatchTag', { 'for': 'html' }
-Plugin 'othree/html5.vim', { 'for': 'html' }
-Plugin 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
-Plugin 'elzr/vim-json', { 'for': 'json' }
-Plugin 'moll/vim-node', { 'for': 'javascript' }
-Plugin 'groenewege/vim-less', { 'for': 'less' }
-Plugin 'ap/vim-css-color', { 'for': 'css' }
-Plugin 'hail2u/vim-css3-syntax', { 'for': 'css' }
-Plugin 'tpope/vim-markdown', { 'for': 'markdown' }
-Plugin 'mxw/vim-jsx', { 'for': 'jsx' }
+Plugin 'pangloss/vim-javascript'
+Plugin 'keith/swift.vim'
+Plugin 'mattn/emmet-vim'
+Plugin 'gregsexton/MatchTag'
+Plugin 'othree/html5.vim'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'elzr/vim-json'
+Plugin 'moll/vim-node'
+Plugin 'groenewege/vim-less'
+Plugin 'ap/vim-css-color'
+Plugin 'hail2u/vim-css3-syntax'
+Plugin 'tpope/vim-markdown'
+Plugin 'mxw/vim-jsx'
 
 call vundle#end()
 filetype plugin indent on
@@ -114,6 +114,9 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 " search the nearest ancestor that contains .git, .hg, .svn
 let g:ctrlp_working_path_mode = 2
 
+" YOUCOMPLETEME
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " SYNTASTIC
 set statusline+=%#warningmsg#
