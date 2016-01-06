@@ -16,6 +16,7 @@
 	* Key repeat : Fast
 	* Delay until repeat : short
 	* Modify keys : Capslock -> Control
+13. Relatives links in the user folder : .vimrc, .vimrc_cathode, .tmux.conf, spotify.scpt, tmux-resurrect, tmux_theme.sh.
 
 #Memo / Shortcuts
 * Ctrl+Q = Tmux prefix 
