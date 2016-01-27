@@ -33,6 +33,7 @@ Plugin 'ap/vim-css-color'
 Plugin 'hail2u/vim-css3-syntax'
 Plugin 'tpope/vim-markdown'
 Plugin 'mxw/vim-jsx'
+Plugin 'LaTeX-Box-Team/LaTeX-Box'
 
 call vundle#end()
 filetype plugin indent on
@@ -134,6 +135,11 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+"let g:syntastic_javascript_checkers = ['eslint']
+
+" VIMJSX
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 
 " OTHER
 set encoding=utf-8
