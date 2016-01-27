@@ -16,7 +16,7 @@
 	* Key repeat : Fast
 	* Delay until repeat : short
 	* Modify keys : Capslock -> Control
-13. Relatives links in the user folder : .vimrc, .vimrc_cathode, .tmux.conf, spotify.scpt, tmux-resurrect, tmux_theme.sh.
+13. Relatives links in the user folder : .vimrc, .vimrc_cathode, .tmux.conf, spotify.scpt, tmux-resurrect, tmux_theme.sh, .latexmkrc.
 
 #Memo / Shortcuts
 * Ctrl+Q = Tmux prefix 
@@ -28,3 +28,10 @@
 * Prefix + | = Create vertical pane.
 * Prefix + - = Create horizontal pane.
 * Tmux cheatsheet : https://gist.github.com/henrik/1967800
+
+#Latex
+1. Install Latex
+2. Install Latexmk
+3. Install Skim
+4. Configure Skim refresh rules.
+5. Start with the following command : latexmk <filename.tex> -pdf -pvc
